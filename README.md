@@ -10,6 +10,7 @@
 # 第一关
 ![image](https://github.com/hanbarger/poor-S-DES/assets/147252358/af427afd-ba4d-4c53-bc92-8c0c7cd61cf2)
 ![image](https://github.com/hanbarger/poor-S-DES/assets/147252358/c472acc6-fdcf-4ba8-95ec-e11fd9e4fa96)
+
 测试明文：10101010 
 密钥：1111100000
 生成密文：00011011
@@ -20,34 +21,47 @@
 测试明文：10101010 
 密钥：1111100000
 测试密文：00011011
+
 ![image](https://github.com/hanbarger/poor-S-DES/assets/147252358/3cd61498-21ca-4f75-bfe4-57e43305af80)
+
 解密：
+
 ![image](https://github.com/hanbarger/poor-S-DES/assets/147252358/d928a7d4-88df-496a-ba9e-a6967a87d962)
+
 ACSII 加密
 测试明文：Hello
 密钥：0100010001
 测试密文：&Xkk)
 解密：
+
 ![image](https://github.com/hanbarger/poor-S-DES/assets/147252358/d29bad1a-67f2-40ce-8266-57920ef4cc0d)
+
 第二关完成
 
 # 第三关
 输入明文：CjkR
 密钥：1100010110
 输出密文：iS*r
+
 ![image](https://github.com/hanbarger/poor-S-DES/assets/147252358/0a745ada-b916-402b-907e-a95b76c8b54c)
+
 ![image](https://github.com/hanbarger/poor-S-DES/assets/147252358/5e831b61-48b3-4720-82e5-d6782de6f545)
+
 第三关完成
 
 # 第四关
 明文：10101010
 密文：00011001
-测试结果：[‘0010100000’,’0110100000’,’0011101010’,’0111101010’]
+测试结果：
+[‘0010100000’,’0110100000’,’0011101010’,’0111101010’]
+
 暴力破解用时：10.94s
 ![image](https://github.com/hanbarger/poor-S-DES/assets/147252358/f596b5e3-9a3a-49ed-9268-7d40c1e637e3)
+
 明文：10101010
 密文：11101101
-测试结果：[‘1011111110’,’1111111110’,’0000011011’,’0100011011’]
+测试结果：
+[‘1011111110’,’1111111110’,’0000011011’,’0100011011’]
 暴力破解用时：13.59s
 ![image](https://github.com/hanbarger/poor-S-DES/assets/147252358/58bfb301-2c85-4087-aee7-980a54d273d7)
 第四关完成
@@ -57,8 +71,10 @@ ACSII 加密
 密文 00011001
 密钥分别为 0011101010 和 0111101010时
 0011101010 生成的子密钥：
+
 ![image](https://github.com/hanbarger/poor-S-DES/assets/147252358/240c4988-905d-4052-818b-710e04757e29)
 0111101010 生成的子密钥
+
 ![image](https://github.com/hanbarger/poor-S-DES/assets/147252358/b82c9adc-7197-4798-afa8-c3d31926e014)
 0011101010 和 0111101010 产生的两个子密钥一致，结果一致
 
