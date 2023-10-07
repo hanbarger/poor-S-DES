@@ -7,4 +7,65 @@
  第4关：暴力破解假设你找到了使用相同密钥的明、密文对(一个或多个)，请尝试使用暴力破解的方法找到正确的密钥Key。在编写程序时，你也可以考虑使用多线程的方式提升破解的效率。请设定时间戳，用视频或动图展示你在多长时间内完成了暴力破解。
  第5关：封闭测试根据第4关的结果，进一步分析，对于你随机选择的一个明密文对，是不是有不止一个密钥Key？进一步扩展，对应明文空间任意给定的明文分组P_{n}，是否会出现选择不同的密钥K_{i}\ne K_{j}加密得到相同密文C_n的情况？
 
+# 第一关
+![image](https://github.com/hanbarger/poor-S-DES/assets/147252358/af427afd-ba4d-4c53-bc92-8c0c7cd61cf2)
+![image](https://github.com/hanbarger/poor-S-DES/assets/147252358/c472acc6-fdcf-4ba8-95ec-e11fd9e4fa96)
+测试明文：10101010 
+密钥：1111100000
+生成密文：00011011
+第一关完成
 
+# 第二关
+二进制加密
+测试明文：10101010 
+密钥：1111100000
+测试密文：00011011
+![image](https://github.com/hanbarger/poor-S-DES/assets/147252358/3cd61498-21ca-4f75-bfe4-57e43305af80)
+解密：
+![image](https://github.com/hanbarger/poor-S-DES/assets/147252358/d928a7d4-88df-496a-ba9e-a6967a87d962)
+ACSII 加密
+测试明文：Hello
+密钥：0100010001
+测试密文：&Xkk)
+解密：
+![image](https://github.com/hanbarger/poor-S-DES/assets/147252358/d29bad1a-67f2-40ce-8266-57920ef4cc0d)
+第二关完成
+
+# 第三关
+输入明文：CjkR
+密钥：1100010110
+输出密文：iS*r
+![image](https://github.com/hanbarger/poor-S-DES/assets/147252358/0a745ada-b916-402b-907e-a95b76c8b54c)
+![image](https://github.com/hanbarger/poor-S-DES/assets/147252358/5e831b61-48b3-4720-82e5-d6782de6f545)
+第三关完成
+
+# 第四关
+明文：10101010
+密文：00011001
+测试结果：[‘0010100000’,’0110100000’,’0011101010’,’0111101010’]
+暴力破解用时：10.94s
+![image](https://github.com/hanbarger/poor-S-DES/assets/147252358/f596b5e3-9a3a-49ed-9268-7d40c1e637e3)
+明文：10101010
+密文：11101101
+测试结果：[‘1011111110’,’1111111110’,’0000011011’,’0100011011’]
+暴力破解用时：13.59s
+![image](https://github.com/hanbarger/poor-S-DES/assets/147252358/58bfb301-2c85-4087-aee7-980a54d273d7)
+第四关完成
+
+# 第五关
+明文 10101010
+密文 00011001
+密钥分别为 0011101010 和 0111101010时
+0011101010 生成的子密钥：
+![image](https://github.com/hanbarger/poor-S-DES/assets/147252358/240c4988-905d-4052-818b-710e04757e29)
+0111101010 生成的子密钥
+![image](https://github.com/hanbarger/poor-S-DES/assets/147252358/b82c9adc-7197-4798-afa8-c3d31926e014)
+0011101010 和 0111101010 产生的两个子密钥一致，结果一致
+
+明文 10101010
+密文 11101101
+1011111110 和 1111111110 产生的子密钥一致，结果一致
+
+得出：两个 10bit 位的密钥只有第二位不同，其它位都相同时，这个两个密
+钥的子密钥相同
+第五关完成
